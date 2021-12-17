@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:simple_app/page/login_page.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key, required}) : super(key: key);
-  final String email;
-  final String password;
+  const HomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +11,6 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('My Home Page'),
       ),
-      body: const LoginPage(),
     );
   }
 }
