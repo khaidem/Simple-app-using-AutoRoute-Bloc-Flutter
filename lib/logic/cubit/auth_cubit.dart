@@ -7,16 +7,21 @@ part 'auth_state.dart';
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(const AuthState(status: AuthStatus.initial));
 
-  Future<void> getData() async {
-    if (isLoading) return;
+  final _auth = FirebaseAuth.instance;
 
-    emit(const AuthState(status: AuthStatus.loading));
-    // try {
-    //   final data = await ;
+  Future<void> login(String email, String password) async {
+    if (isLoading) {
+      return;
+    }
 
-    // } catch (e) {
-
-    // }
+    emit(const AuthState(status: AuthStatus.initial));
+    try {
+      await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      emit(const AuthState(status: AuthStatus.loaded));
+    } catch (e) {
+      emit(const AuthState(status: AuthStatus.error));
+    }
   }
 
   bool get isLoading => state.status == AuthStatus.loading;

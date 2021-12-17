@@ -1,9 +1,7 @@
-import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
-import 'package:simple_app/router/router.dart';
+import 'package:simple_app/logic/cubit/auth_cubit.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -15,8 +13,6 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
-  // final _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -80,9 +76,27 @@ class _LoginPageState extends State<LoginPage> {
                     child: ElevatedButton(
                       child: const Text('Login'),
                       onPressed: () {
-                        log(emailController.text);
-                        log(passwordController.text);
+                        final counterCubit = context.read<AuthCubit>();
+                        AuthCubit.;
+
+                        // context.router.push(HomeRoute(
+                        //     email: emailController.text,
+                        //     password: passwordController.text));
+                        // log(emailController.text);
+                        // log(passwordController.text);
+                        // _auth
+                        //     .signInWithEmailAndPassword(
+                        //         email: emailController.text,
+                        //         password: passwordController.text)
+                        //     .whenComplete(() => HomeRoute(
+                        //         email: emailController.text,
+                        //         password: passwordController.text));
+
                         // _auth.signInWithEmailAndPassword(
+                        //     email: emailController.text,
+                        //     password: passwordController.text).whenComplete(() => HomeRoute);
+
+                        // _auth.createUserWithEmailAndPassword(
                         //     email: emailController.text,
                         //     password: passwordController.text);
 
