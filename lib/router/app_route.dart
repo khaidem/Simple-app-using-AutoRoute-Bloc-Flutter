@@ -4,9 +4,8 @@ import '../page/page.dart';
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    AutoRoute(page: LoginPage, initial: true),
-    AutoRoute(page: HomePage),
-    // AutoRoute(page: HomeDetailPage),
+    AutoRoute(page: SignUp, initial: true),
+    AutoRoute(page: FogetPage),
   ],
 )
 class $AppRouter {}

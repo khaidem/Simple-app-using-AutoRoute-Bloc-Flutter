@@ -23,16 +23,21 @@ class AppRouter extends _i2.RootStackRouter {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i1.LoginPage());
     },
-    HomeRoute.name: (routeData) {
+    SignUp.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.HomePage());
+          routeData: routeData, child: const _i1.SignUp());
+    },
+    FogetRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.FogetPage());
     }
   };
 
   @override
   List<_i2.RouteConfig> get routes => [
         _i2.RouteConfig(LoginRoute.name, path: '/'),
-        _i2.RouteConfig(HomeRoute.name, path: '/home-page')
+        _i2.RouteConfig(SignUp.name, path: '/sign-up'),
+        _i2.RouteConfig(FogetRoute.name, path: '/foget-page')
       ];
 }
 
@@ -45,9 +50,17 @@ class LoginRoute extends _i2.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i1.HomePage]
-class HomeRoute extends _i2.PageRouteInfo<void> {
-  const HomeRoute() : super(HomeRoute.name, path: '/home-page');
+/// [_i1.SignUp]
+class SignUp extends _i2.PageRouteInfo<void> {
+  const SignUp() : super(SignUp.name, path: '/sign-up');
 
-  static const String name = 'HomeRoute';
+  static const String name = 'SignUp';
+}
+
+/// generated route for
+/// [_i1.FogetPage]
+class FogetRoute extends _i2.PageRouteInfo<void> {
+  const FogetRoute() : super(FogetRoute.name, path: '/foget-page');
+
+  static const String name = 'FogetRoute';
 }
