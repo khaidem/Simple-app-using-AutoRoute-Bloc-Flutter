@@ -1,7 +1,4 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-
-import 'package:simple_app/router/router.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({
@@ -80,10 +77,9 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
               ElevatedButton(
-                  onPressed: () {
-                    AutoRouter.of(context).push(const LoginRoute());
-                  },
-                  child: const Text('SignUp'))
+                onPressed: () {},
+                child: const Text('SignUp'),
+              ),
             ],
           ),
         ),

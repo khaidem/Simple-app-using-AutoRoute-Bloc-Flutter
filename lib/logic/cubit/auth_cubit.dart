@@ -9,21 +9,6 @@ class AuthCubit extends Cubit<AuthState> {
 
   final _auth = FirebaseAuth.instance;
 
-  Future<void> signUp(String email, String password) async {
-    if (isLoading) {
-      return;
-    }
-
-    emit(const AuthState(status: AuthStatus.initial));
-    try {
-      await _auth.createUserWithEmailAndPassword(
-          email: email, password: password);
-      emit(const AuthState(status: AuthStatus.loaded));
-    } catch (e) {
-      emit(const AuthState(status: AuthStatus.error));
-    }
-  }
-
   Future<void> login(String email, String password) async {
     if (isLoading) {
       return;

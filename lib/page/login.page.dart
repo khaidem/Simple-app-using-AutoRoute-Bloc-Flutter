@@ -71,14 +71,14 @@ class _LoginPageState extends State<LoginPage> {
                     //     .then((value) => LoginRoute);
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    // _auth.signInWithEmailAndPassword(
-                    //     email: email, password: password)
-                    //forgot password screen
-                  },
-                  child: const Text('Forgot Password'),
-                ),
+                // ElevatedButton(
+                //   onPressed: () {
+                //     // _auth.signInWithEmailAndPassword(
+                //     //     email: email, password: password)
+                //     //forgot password screen
+                //   },
+                //   child: const Text('Forgot Password'),
+                // ),
                 Container(
                     height: 50,
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -109,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                         //     email: emailController.text,
                         //     password: passwordController.text);
 
-                        //context.router.push(const HomeRoute());
+                        // context.router.push(const HomeRoute());
                         // (nameController.text);
                         // (passwordController.text);
                       },
@@ -123,8 +123,6 @@ class _LoginPageState extends State<LoginPage> {
                         style: TextStyle(fontSize: 20),
                       ),
                       onPressed: () {
-                        AutoRouter.of(context).push(const SignUp());
-
                         //signup screen
                       },
                     )
